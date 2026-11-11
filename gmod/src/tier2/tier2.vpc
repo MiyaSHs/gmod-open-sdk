@@ -1,0 +1,35 @@
+//-----------------------------------------------------------------------------
+//	TIER1.VPC
+//
+//	Project Script
+//-----------------------------------------------------------------------------
+
+$macro SRCDIR		".."
+ 
+$include "$SRCDIR\vpc_scripts\source_lib_base.vpc"
+
+$Configuration
+{
+	$Compiler
+	{
+		$PreprocessorDefinitions		"$BASE;TIER2_STATIC_LIB"
+	}
+
+	$Librarian [$WINDOWS]
+	{
+		$AdditionalDependencies			"$BASE Rpcrt4.lib"
+	}
+}
+
+$Project "tier2"
+{
+	$Folder	"Source Files"
+	{
+		$File	"tier2.cpp"
+	}
+
+	$Folder	"Header Files"
+	{
+		$File	"$SRCDIR\public\tier2\tier2.h"
+	}
+}

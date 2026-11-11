@@ -1,0 +1,24 @@
+//-----------------------------------------------------------------------------
+//	PROJECTS.VGC
+//
+//	Project Configurations for all Source(TM) Projects
+//-----------------------------------------------------------------------------
+
+/////////////////////////
+// Project definitions //
+/////////////////////////
+
+$Project "mathlib"
+{
+	"mathlib\mathlib.vpc" [!$GAME_ASW]
+}
+
+$Project "tier1"
+{
+	"tier1\tier1.vpc" 	[!$GAME_ASW]
+}
+
+$Project "tier2"
+{
+	"tier2\tier2.vpc" 	[!$GAME_ASW]
+}
